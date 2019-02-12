@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D9F81F6A-5B5A-4108-94FC-0C51A3912ECD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HAAGONtest</RootNamespace>
+    <AssemblyName>HAAGONtest</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\HAAGON\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="bgapi2_genicam_dotnet, Version=2.8.15475.15736, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Debug\bgapi2_genicam_dotnet.dll</HintPath>
+    </Reference>
+    <Reference Include="FinsTcp, Version=3.4.1.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL Files\FinsTcp.dll</HintPath>
+    </Reference>
+    <Reference Include="halcondotnet, Version=12.0.0.0, Culture=neutral, PublicKeyToken=4973bed59ddbf2b8, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x86\Debug\halcondotnet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CCD_sys.cs" />
+    <Compile Include="ChangePassWord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangePassWord.Designer.cs">
+      <DependentUpon>ChangePassWord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CSV_sys.cs" />
+    <Compile Include="Enum_sys.cs" />
+    <Compile Include="frmAutoRun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAutoRun.Designer.cs">
+      <DependentUpon>frmAutoRun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInitShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInitShow.Designer.cs">
+      <DependentUpon>frmInitShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProdChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProdChange.Designer.cs">
+      <DependentUpon>frmProdChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProdSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProdSelect.Designer.cs">
+      <DependentUpon>frmProdSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HipotTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HipotTest.designer.cs">
+      <DependentUpon>HipotTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IniAPI.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mod_sys.cs" />
+    <Compile Include="frmNameModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNameModel.Designer.cs">
+      <DependentUpon>frmNameModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Run_sys.cs" />
+    <Compile Include="TCPCommunition.cs" />
+    <EmbeddedResource Include="ChangePassWord.resx">
+      <DependentUpon>ChangePassWord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAutoRun.resx">
+      <DependentUpon>frmAutoRun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInitShow.resx">
+      <DependentUpon>frmInitShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProdChange.resx">
+      <DependentUpon>frmProdChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProdSelect.resx">
+      <DependentUpon>frmProdSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HipotTest.resx">
+      <DependentUpon>HipotTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNameModel.resx">
+      <DependentUpon>frmNameModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChoiceTech.Halcon.Control\ChoiceTech.Halcon.Control.csproj">
+      <Project>{4F95D906-4CE8-42EC-AF23-55F5A12897F1}</Project>
+      <Name>ChoiceTech.Halcon.Control</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
